@@ -4,6 +4,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="blue">#1a9df1</color>
-    <color name="yellow">#ffdd230</color>
+    <color name="yellow">#fdd230</color>
+    <color name="opi">#FFFFCC</color>
+
 
 </resources>

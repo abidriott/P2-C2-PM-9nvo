@@ -9,13 +9,13 @@
 
     <item
         android:id="@+id/bottom_lista"
-        android:title="List"
+        android:title="Lista"
         android:icon="@drawable/list">
     </item>
 
     <item
         android:id="@+id/bottom_windw"
-        android:title="Windows"
+        android:title="Window"
         android:icon="@drawable/window">
     </item>
     <item

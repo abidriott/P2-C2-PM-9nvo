@@ -1,12 +1,12 @@
 package com.example.bottomnavigation
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.ListFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -17,31 +17,32 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        bottomNavigationView=findViewById(R.id.bottom_navigation)
+        bottomNavigationView = findViewById(R.id.bottom_navigation)
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
-           when(menuItem.itemId){
-               R.id.bottom_home ->{
-                   replaceFragment(HomeFragment())
-                   true
-               }
-               R.id.bottom_lista->{
-                   replaceFragment(ListFragment())
-                   true
-               }
-               R.id.bottom_windw->{
-                   replaceFragment(WindowFragment())
-                   true
-               }
-               R.id.bottom_datos->{
-                   replaceFragment(DataFragment())
-                   true
-               }
-               else ->false
-
-           }
+            when (menuItem.itemId) {
+                R.id.bottom_home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.bottom_lista -> {
+                    replaceFragment(ListFragment())
+                    true
+                }
+                R.id.bottom_windw -> {
+                    replaceFragment(WindowFragment())
+                    true
+                }
+                R.id.bottom_datos -> {
+                    replaceFragment(DataFragment())
+                    true
+                }
+                else -> false
+            }
         }
-        replaceFragment(HomeFragment())
 
+        // Set the initial fragment
+        replaceFragment(HomeFragment())
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -49,8 +50,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    private fun replaceFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit()
 
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit()
     }
 }

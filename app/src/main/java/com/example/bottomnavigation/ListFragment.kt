@@ -1,18 +1,19 @@
 package com.example.bottomnavigation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 
 class ListFragment : Fragment() {
 
     private lateinit var listView: ListView
-    private lateinit var arrayList: ArrayList<String>
+   // private lateinit var arrayList: ArrayList<String>
     private lateinit var adapter: ArrayAdapter<String>
 
     override fun onCreateView(
@@ -21,16 +22,15 @@ class ListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-        // Verificar si view es nulo (práctica defensiva)
-        view ?: return null
-
         listView = view.findViewById(R.id.lstAlumnos)
-        val items = resources.getStringArray(R.array.alumnos)
 
-        arrayList = ArrayList()
-        arrayList.addAll(items)
-        adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, arrayList)
+        // Obtener el array de estudiantes desde los recursos
+        val estudiantes = resources.getStringArray(R.array.alumnos)
 
+        // Crear el adaptador con el array de estudiantes
+        adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_list_item_1, estudiantes)
+
+        // Configurar el adaptador al ListView
         listView.adapter = adapter
 
         listView.setOnItemClickListener { parent, view, position, id ->
@@ -47,4 +47,5 @@ class ListFragment : Fragment() {
         return view
     }
 }
+
 

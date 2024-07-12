@@ -5,13 +5,89 @@
     android:layout_height="match_parent"
     tools:context=".DataFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Opciones de configuracion(?"
-        android:textSize="36sp"
-        android:textColor="@color/blue"
-        android:gravity="center" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="TENGO HAMBRE 12/07/2024"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/Matricula"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="123"></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNombre"
+            android:text="Nombre">
+        </TextView>
+        <EditText
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:id="@+id/txtNombre"
+            android:hint="Paterno, Materno, Nombres">
+        </EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDomicilio"
+            android:text="Domicilio"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"            android:id="@+id/txtDomicilio"
+            android:hint="Calle # Colonia CP">
+        </EditText>
+
+        <ImageView
+            android:id="@+id/imgAlumno"
+            android:layout_width="match_parent"
+            android:layout_height="327dp"
+            android:src=""></ImageView>
+
+        <EditText
+            android:id="@+id/txtEspecialidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Grado, Licenciatura o Ing. "
+            android:textSize="20dp"></EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtFoto"
+            android:layout_gravity="center"
+            android:text="Url Foto"></TextView>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+            <TableRow>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"
+                    android:id="@+id/btnGuardar"
+                    android:layout_span="2"></Button>
+                    <Button
+                        android:id="@+id/btnBuscar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:text="Buscar"></Button>
+            </TableRow>
+
+
+        </TableLayout>
+
+
+    </LinearLayout>
 </FrameLayout>

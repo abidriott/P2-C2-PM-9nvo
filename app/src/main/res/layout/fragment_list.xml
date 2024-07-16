@@ -21,12 +21,19 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="30sp">
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_marginTop="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sbg"
+            android:queryHint="Buscar alumnos" />
 
         <ListView
             android:id="@+id/lstAlumnos"
             android:layout_width="match_parent"
             android:layout_height="374dp"
-            android:layout_marginTop="90dp"></ListView>
+            android:layout_marginTop="45dp"></ListView>
     </LinearLayout>
 
 </FrameLayout>

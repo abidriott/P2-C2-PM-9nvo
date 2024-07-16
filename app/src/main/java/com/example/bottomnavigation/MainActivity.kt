@@ -29,14 +29,15 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(ListFragment())
                     true
                 }
-                R.id.bottom_windw -> {
-                    replaceFragment(WindowFragment())
-                    true
-                }
                 R.id.bottom_datos -> {
                     replaceFragment(DataFragment())
                     true
                 }
+                R.id.bottom_windw -> {
+                    replaceFragment(WindowFragment())
+                    true
+                }
+
                 else -> false
             }
         }

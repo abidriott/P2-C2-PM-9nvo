@@ -67,14 +67,15 @@
         android:padding="16dp"
         android:gravity="center_vertical">
 
-        <ImageView
-            android:layout_marginTop="1dp"
-            android:id="@+id/imageView"
-            android:layout_gravity="center"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/foto"
             android:layout_width="170dp"
             android:layout_height="200dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
             android:src="@drawable/catuniform"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circle" />
 
         <TextView
             android:layout_width="203dp"

@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/bottom_home"
-        android:title="Home"
+        android:title="Inicio"
         android:icon="@drawable/home">
     </item>
 
@@ -12,17 +12,18 @@
         android:title="Lista"
         android:icon="@drawable/list">
     </item>
+    <item
+        android:id="@+id/bottom_datos"
+        android:title="Agregar"
+        android:icon="@drawable/aggc">
+    </item>
 
     <item
         android:id="@+id/bottom_windw"
-        android:title="Datos"
-        android:icon="@drawable/window">
+        android:title="Alumnos"
+        android:icon="@drawable/contacts">
     </item>
-    <item
-        android:id="@+id/bottom_datos"
-        android:title="Data"
-        android:icon="@drawable/data">
-    </item>
+
 
 
 </menu>

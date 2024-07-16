@@ -3,6 +3,7 @@ package com.example.bottomnavigation.DataBase
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
+import android.database.Cursor
 
 class dbAlumnos (private val context: Context) {
 
@@ -78,7 +79,20 @@ class dbAlumnos (private val context: Context) {
     //obtener los registros
 
     fun leerTodos(): ArrayList<Alumno>{
-        val cursor=db.query(DefinirDB.Alumnos.TABLA, leerRegistro, null, null, null )
+        val cursor = db.query(DefinirDB.Alumnos.TABLA, leerRegistro, null, null, null, null, null)
+        val listaAlumno = ArrayList<Alumno>()
+        cursor.moveToFirst()
+
+        while (!cursor.isAfterLast) {
+            val alumno = mostrarAlumnos(cursor)
+            listaAlumno.add(alumno)
+            cursor.moveToNext()
+        }
+        cursor.close()
+        return listaAlumno
+    }
+    fun close(){
+        dbHelper.close()
     }
 
 }

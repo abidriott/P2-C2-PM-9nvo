@@ -47,19 +47,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:text="PERAZA SAINZ JESUS ALAN"
+                    android:textSize="17sp"
+                    android:text="@string/alumno"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtCarrera"
+                    android:id="@+id/txtAlumnoCarrera"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:text="Ing. Tec. Información"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textSize="15dp"
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <TextView

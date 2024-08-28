@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.bottomnavigation"
+    namespace = "com.btnv.bottomnavigation"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bottomnavigation"
+        applicationId = "com.btnv.bottomnavigation"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
+        versionCode = 3
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
